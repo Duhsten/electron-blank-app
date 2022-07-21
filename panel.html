@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="css/bootstrap.css" rel="stylesheet" />
+ <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+ <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+ <script src="js/bootstrap.min.js" ></script>
+  <link href="./windowstyle.css" rel="stylesheet" />
+  <link href="./styles.css" rel="stylesheet" />
+  <link href="css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  
+  <title>Panel</title>
+  <style type="text/css">
+    body {
+      border: 1px solid #48545c;
+      background: #272727 !important;
+      overflow-y: hidden;
+    }
+  </style>
+</head>
+
+<body>
+  <header id="titlebar">
+    <div id="drag-region">
+      <div id="window-title ">
+        <img src="img/logo.png" width="15" height="15">
+        <span class="text-light">Trikon Games</span>
+      </div>
+      <div id="window-controls">
+        <div class="button" id="min-button">
+          <img class="icon" srcset="
+                icons/min-w-10.png 1x,
+                icons/min-w-12.png 1.25x,
+                icons/min-w-15.png 1.5x,
+                icons/min-w-15.png 1.75x,
+                icons/min-w-20.png 2x,
+                icons/min-w-20.png 2.25x,
+                icons/min-w-24.png 2.5x,
+                icons/min-w-30.png 3x,
+                icons/min-w-30.png 3.5x
+              " draggable="false" />
+        </div>
+
+        <div class="button" id="max-button">
+          <img class="icon" srcset="
+                icons/max-w-10.png 1x,
+                icons/max-w-12.png 1.25x,
+                icons/max-w-15.png 1.5x,
+                icons/max-w-15.png 1.75x,
+                icons/max-w-20.png 2x,
+                icons/max-w-20.png 2.25x,
+                icons/max-w-24.png 2.5x,
+                icons/max-w-30.png 3x,
+                icons/max-w-30.png 3.5x
+              " draggable="false" />
+        </div>
+
+        <div class="button" id="restore-button">
+          <img class="icon" srcset="
+                icons/restore-w-10.png 1x,
+                icons/restore-w-12.png 1.25x,
+                icons/restore-w-15.png 1.5x,
+                icons/restore-w-15.png 1.75x,
+                icons/restore-w-20.png 2x,
+                icons/restore-w-20.png 2.25x,
+                icons/restore-w-24.png 2.5x,
+                icons/restore-w-30.png 3x,
+                icons/restore-w-30.png 3.5x
+              " draggable="false" />
+        </div>
+
+        <div class="button" id="close-button">
+          <img class="icon" srcset="
+                icons/close-w-10.png 1x,
+                icons/close-w-12.png 1.25x,
+                icons/close-w-15.png 1.5x,
+                icons/close-w-15.png 1.75x,
+                icons/close-w-20.png 2x,
+                icons/close-w-20.png 2.25x,
+                icons/close-w-24.png 2.5x,
+                icons/close-w-30.png 3x,
+                icons/close-w-30.png 3.5x
+              " draggable="false" />
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <script src="js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="./renderer_panel.js"></script>
+  <div id="main">
+    <!-- Vertical navbar -->
+<div class="vertical-nav bg-primary" id="sidebar">
+  <div class="py-4 px-3 mb-4 bg-primary">
+    <div class="media d-flex align-items-center"><img src="https://bootstrapious.com/i/snippets/sn-v-nav/avatar.png" alt="..." width="65" class="mr-3 rounded-circle img-thumbnail shadow-sm">
+      <div class="media-body">
+        <h4 class="m-0">Jason Doe</h4>
+        <p class="font-weight-light text-muted mb-0">Web developer</p>
+      </div>
+    </div>
+  </div>
+
+  <p class="text-gray font-weight-bold text-uppercase px-3 small pb-4 mb-0">Main</p>
+
+  <ul class="nav flex-column bg-primary mb-0">
+    <li class="nav-item">
+      <a href="#" class="nav-link text-light  bg-secondary">
+                <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
+                Dashboard
+            </a>
+    </li>
+    <li class="nav-item">
+      <a href="games.html" class="nav-link text-light ">
+                <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
+                Games
+            </a>
+    </li>
+    <li class="nav-item">
+      <a href="#" class="nav-link text-light ">
+                <i class="fa fa-cubes mr-3 text-primary fa-fw"></i>
+                Settings
+            </a>
+    </li>
+    <li class="nav-item">
+      <a href="#" class="nav-link text-light ">
+                <i class="fa fa-cubes mr-3 text-primary fa-fw"></i>
+                Quit
+            </a>
+    </li>
+  </ul>
+
+  <p class="text-gray font-weight-bold text-uppercase px-3 small py-4 mb-0">Charts</p>
+
+  <ul class="nav flex-column bg-primary mb-0">
+    <li class="nav-item">
+      <a href="#" class="nav-link text-dark font-italic">
+                <i class="fa fa-area-chart mr-3 text-primary fa-fw"></i>
+                Area charts
+            </a>
+    </li>
+    <li class="nav-item">
+      <a href="#" class="nav-link text-dark font-italic">
+                <i class="fa fa-bar-chart mr-3 text-primary fa-fw"></i>
+                Bar charts
+            </a>
+    </li>
+    <li class="nav-item">
+      <a href="#" class="nav-link text-dark font-italic">
+                <i class="fa fa-pie-chart mr-3 text-primary fa-fw"></i>
+                Pie charts
+            </a>
+    </li>
+    <li class="nav-item">
+      <a href="#" class="nav-link text-dark font-italic">
+                <i class="fa fa-line-chart mr-3 text-primary fa-fw"></i>
+                Line charts
+            </a>
+    </li>
+  </ul>
+</div>
+<!-- End vertical navbar -->
+
+
+<!-- Page content holder -->
+<div class="page-content p-5" id="content">
+  <!-- Toggle button -->
+  <button id="sidebarCollapse" type="button" class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4"><i class="fa fa-bars mr-2"></i><small class="text-uppercase font-weight-bold">Toggle</small></button>
+
+  <!-- Demo content -->
+  <h2 class="display-4 text-white">Bootstrap vertical nav</h2>
+  <p class="lead text-white mb-0">Build a fixed sidebar using Bootstrap 4 vertical navigation and media objects.</p>
+  <p class="lead text-white">Snippet by <a href="https://bootstrapious.com/snippets" class="text-white">
+        <u>Bootstrapious</u></a>
+  </p>
+  <div class="separator"></div>
+  <div class="row text-white">
+    <div class="col-lg-7">
+ 
+    </div>
+    <div class="col-lg-5">
+    
+  </div>
+
+</div>
+ </div>
+</body>
+
+</html>
